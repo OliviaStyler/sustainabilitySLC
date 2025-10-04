@@ -67,7 +67,7 @@ ul li a {
 	text-decoration: none;
 }
 ul li:hover a {
-	color: #73C1C6;
+	color: #FFFC99;
 }
 #selected{
   text-decoration: underline #FFFC99 3px;
@@ -140,7 +140,18 @@ a{
   text-decoration: none;
 }
 a:hover{
-  color:pink;
+  color:#73C1C6;
+}
+
+/* oliviaLogo Placement */
+.cornerLogo {
+  position: fixed;   /* stays put while scrolling */
+  bottom: 10px;      /* distance from bottom */
+  right: 10px;       /* distance from right */
+  width: 50px;       /* adjust as needed */
+  height: auto;      /* keep aspect ratio */
+  z-index: 1000;     /* makes sure it’s above other elements */
+  opacity: 0.5;
 }
 
 /*Adjustments for devices  */
