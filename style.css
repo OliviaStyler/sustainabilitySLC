@@ -15,12 +15,18 @@ body{
   text-align: center;
   background-color: #6ABEA7;
   padding:20px;
-  font-family: "vandertak-capslock-top", sans-serif;
-font-weight: 200;
-font-style: normal;
+  /* font-family: "vandertak-capslock-top", sans-serif;
+  font-weight: 400;
+  font-style: normal; */
   /* font-size: 50px; */
   font-size: clamp(2rem, 5vw, 50px);
   margin-bottom: 0px;
+  color: white;
+}
+.banner h1{
+  font-family: "vandertak-capslock-top", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .title-break{
   display:inline;
@@ -50,12 +56,12 @@ nav {
 header nav ul {
 	list-style: none;
 	float: right;
-  font-family: "serenity";
+  font-family: "avenir";
 }
 nav ul li {
 	float: left;
 	color: #FFFFFF;
-	font-size: 20px;
+	font-size: 18px;
 	text-align: left;
 	margin-right: 25px;
 	letter-spacing: 2px;
@@ -67,10 +73,10 @@ ul li a {
 	text-decoration: none;
 }
 ul li:hover a {
-	color: #FFFC99;
+	color: #447604;
 }
 #selected{
-  text-decoration: underline #FFFC99 3px;
+  text-decoration: underline #6D9960 3px;
 }
 /*Main Content*/
 .container{
@@ -101,6 +107,16 @@ p{
   font-weight: 400;
   font-style: normal;
 }
+.faq ul{
+  padding-left: 75px;
+  padding-right: 55px;
+  line-height: 45px;
+  font-size: 20px;
+  font-family: "avenir-lt-pro", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  margin-left: 55px;
+}
 .contentRight{
   /* float:right; */
   margin-right: 55px;
@@ -117,11 +133,13 @@ p{
 }
 #bottomSpecial{
   border-radius: 0;
-  margin-left: 30%
+  /* margin-left: 30% */
 }
 .ImageBackground{
   background-color: #124559;
   width: 100%;
+  display:flex;
+  justify-content: center;
 }
 /*footer*/
 .footer{
@@ -130,10 +148,20 @@ p{
   text-align: center;
   padding: 15px;
   font-size: 30px;
-  font-family:"cy", sans-serif;
+}
+.footer h1{
+  color: white;
+  font-family: "vandertak-capslock-top", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
 }
 .copyright-wrapper{
   font-family: "avenir-lt-pro", sans-serif;
+  font-size: 13px;
+}
+.disclaimer{
+  font-size: 10px;
 }
 a{
   color: #C60F7B;
@@ -153,7 +181,53 @@ a:hover{
   z-index: 1000;     /* makes sure it’s above other elements */
   opacity: 0.5;
 }
+/* styles for popup window */
+.popup{
+  width: 80%;
+  height: 80%;
+  background-color: #FAF9F6;
+  border-radius: 6px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0.1);
+  text-align:center;
+  padding: 0 30px 30px;
+  color:#333;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
 
+.openPopup{
+  visibility: visible;
+  top:50%;
+  transform: translate(-50%,-50%) scale(1);
+
+}
+
+button{
+  font-size: 45px;
+  font-family: "avenir";
+  font-weight:600;
+  text-align:center;
+  padding:5px 20px;
+  background-color:#6D9960;
+  color:#284503;
+  border-radius: 20px;
+  border:0px;
+  margin: 15px auto; /* Top margin + auto left/right centers it */
+  display: block; /* Required for margin auto to work */
+}
+
+button:hover{
+  background-color: #95CF84;
+  color:#447604;
+
+}
+.cornerButton{
+  height: 25px;
+  display:inline;
+}
 /*Adjustments for devices  */
 @media (max-width: 600px) {
   .title-break {
@@ -191,8 +265,12 @@ a:hover{
   margin-right: 5%;
   width: 90%;
   }
+  .ImageDiv{
+    display:flex;
+    justify-content: center;
+  }
   .contentRight{
-    width:100%;
+    height:80%;
   }
   .container img{
   height: 20em;
@@ -235,8 +313,12 @@ a:hover{
     margin-right: 5%;
 
   }
+  .ImageDiv{
+    display:flex;
+    justify-content: center;
+  }
   .contentRight{
-    width:100%;
+    height:80%;
   }
   .container img{
   height: 20em;
@@ -293,8 +375,12 @@ nav ul li {
   margin-right: 5%;
   width: 90%;
   }
+  .ImageDiv{
+    display:flex;
+    justify-content: center;
+  }
   .contentRight{
-    width:100%;
+    height:80%;
   }
   .container img{
   height: 20em;
@@ -320,8 +406,12 @@ nav ul li {
   margin-right: 5%;
   width: 90%;
   }
+  .ImageDiv{
+    display:flex;
+    justify-content: center;
+  }
   .contentRight{
-    width:100%;
+    height:80%;
   }
   .container img{
   height: 20em;
