@@ -10,6 +10,11 @@ body{
   /* background-color: #fffaf0; */
   background-color:#FAF9F6;
 }
+
+body.popup-open {
+  overflow: hidden;
+}
+
 /*banner*/
 .banner{
   text-align: center;
@@ -78,6 +83,7 @@ ul li:hover a {
 #selected{
   text-decoration: underline #6D9960 3px;
 }
+
 /*Main Content*/
 .container{
   background-color: white;
@@ -188,15 +194,28 @@ a:hover{
   height: 80%;
   background-color: #FAF9F6;
   border-radius: 6px;
+
   position: fixed;
-  top: 0;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%) scale(0.1);
-  text-align:center;
+  transform: translate(-50%, -50%) scale(0.1);
+
+  text-align: center;
   padding: 0 30px 30px;
-  color:#333;
+  color: #333;
+
   visibility: hidden;
-  transition: transform 0.4s, top 0.4s;
+  transition: transform 0.4s, visibility 0.4s;
+
+  overflow: auto; 
+  z-index: 2000;
+}
+
+.popup iframe {
+  width: 100%;
+  height: 80%;
+  min-height: 500px;
+  border: none;
 }
 
 .openPopup{
@@ -205,6 +224,7 @@ a:hover{
   transform: translate(-50%,-50%) scale(1);
 
 }
+
 
 button{
   font-size: 45px;
@@ -225,10 +245,34 @@ button:hover{
   color:#447604;
 
 }
+
+.popup button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  padding: 10px;
+  margin: 0;
+
+  font-size: 0;  
+  line-height: 0;
+
+  border: none;
+  border-radius: 8px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 10;
+}
+
 .cornerButton{
   height: 25px;
   display:inline;
+  
 }
+
 /*Adjustments for devices  */
 @media (max-width: 600px) {
   .title-break {
