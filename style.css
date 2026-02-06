@@ -24,7 +24,7 @@ body{
   color: white;
 }
 .banner h1{
-  font-family: "vandertak-capslock-top", sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -103,7 +103,7 @@ p{
   padding-right: 55px;
   line-height: 25px;
   font-size: 25px;
-  font-family: "avenir-lt-pro", sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -151,7 +151,8 @@ p{
 }
 .footer h1{
   color: white;
-  font-family: "vandertak-capslock-top", sans-serif;
+  /* font-family: "vandertak-capslock-top", sans-serif; */
+  font-family: "Quicksand", sans-serif;
   font-weight: 400;
   font-style: normal;
 
@@ -207,7 +208,7 @@ a:hover{
 
 button{
   font-size: 45px;
-  font-family: "avenir";
+  font-family: "Quicksand";
   font-weight:600;
   text-align:center;
   padding:5px 20px;
